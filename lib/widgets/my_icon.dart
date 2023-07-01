@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class MyIconNew extends StatelessWidget {
-  const MyIconNew({
-    this.icon,
+class MyIcon extends StatelessWidget {
+  const MyIcon({
     required this.text,
     required this.onTap,
     required this.colors,
     this.leading,
+    this.icon,
     this.size = 24,
     this.iconColor = Colors.white,
     super.key,

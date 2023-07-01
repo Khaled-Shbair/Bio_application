@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
+import '../widgets/my_icon.dart';
+import '../units/helper.dart';
 import '../Functions.dart';
-import '../helper.dart';
-import '../widgets/my_icon_new.dart';
 
 class BioScreen extends StatefulWidget {
   const BioScreen({super.key});
@@ -70,7 +70,7 @@ class _BioScreenState extends State<BioScreen> with Helper {
               ),
             ),
             const SizedBox(height: 15),
-            MyIconNew(
+            MyIcon(
               colors: [
                 Colors.green.shade800,
                 Colors.green.shade500,
@@ -79,7 +79,7 @@ class _BioScreenState extends State<BioScreen> with Helper {
               text: 'Call me',
               onTap: () => _myFunctions.makePhoneCall('0599724037', context),
             ),
-            MyIconNew(
+            MyIcon(
               colors: [
                 Colors.blue.shade800,
                 Colors.blue.shade500,
@@ -89,7 +89,7 @@ class _BioScreenState extends State<BioScreen> with Helper {
               size: 30,
               onTap: () => _myFunctions.sendSMS('0599724037', context),
             ),
-            MyIconNew(
+            MyIcon(
               colors: const [
                 Color(0XFF229ED9),
                 Color(0XFF2AABEE),
@@ -99,7 +99,7 @@ class _BioScreenState extends State<BioScreen> with Helper {
               text: 'Telegram',
               onTap: () => _myFunctions.openTelegramChat('0599724037', context),
             ),
-            MyIconNew(
+            MyIcon(
               colors: const [
                 Color(0XFF14D244),
                 Color(0XFF25D366),
@@ -110,7 +110,7 @@ class _BioScreenState extends State<BioScreen> with Helper {
               onTap: () => _myFunctions.openWhatsAppChat(
                   '0599724037', 'مرحبا خالد', context),
             ),
-            MyIconNew(
+            MyIcon(
               colors: const [
                 Color(0XFF4267B2),
                 Color(0XFF3156B0),
@@ -120,7 +120,7 @@ class _BioScreenState extends State<BioScreen> with Helper {
               size: 30,
               onTap: () => _myFunctions.openFacebookProfile(context),
             ),
-            MyIconNew(
+            MyIcon(
               colors: const [
                 Color(0XFF405DE6),
                 Color(0XFF5B51D8),
@@ -138,7 +138,7 @@ class _BioScreenState extends State<BioScreen> with Helper {
               size: 30,
               onTap: () => _myFunctions.openInstagramProfile(context),
             ),
-            MyIconNew(
+            MyIcon(
               colors: const [
                 Color(0XFF4285F4),
                 Color(0XFFDB4437),
