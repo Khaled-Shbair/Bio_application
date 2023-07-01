@@ -56,7 +56,7 @@ class BioScreen extends StatelessWidget with Helper {
               ),
             ),
             const Text(
-              'Flutter Course - Tech Box',
+              'Mobile Application Developer - Flutter',
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Roboto',
