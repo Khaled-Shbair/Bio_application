@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'screens/launch_screen.dart';
 import 'screens/bio_screen.dart';
 
@@ -11,13 +12,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/LaunchScreen',
-      routes: {
-        '/LaunchScreen': (context) => const LaunchScreen(),
-        '/BioScreen': (context) => BioScreen(),
-      },
-    );
+    return ScreenUtilInit(
+        designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            initialRoute: '/LaunchScreen',
+            routes: {
+              '/LaunchScreen': (context) => const LaunchScreen(),
+              '/BioScreen': (context) => BioScreen(),
+            },
+          );
+        });
   }
 }

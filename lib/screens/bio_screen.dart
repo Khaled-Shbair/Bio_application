@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class BioScreen extends StatelessWidget with Helper {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height / 3.5,
+              height: 200.h,
               child: Stack(
                 alignment: AlignmentDirectional.bottomCenter,
                 clipBehavior: Clip.antiAlias,
@@ -28,43 +29,43 @@ class BioScreen extends StatelessWidget with Helper {
                     alignment: AlignmentDirectional.topCenter,
                     child: Image.asset(
                       'assets/images/cover_image.jpg',
-                      height: MediaQuery.of(context).size.height / 4.5,
-                      width: MediaQuery.of(context).size.width,
+                      height: 150.h,
+                      width: double.infinity,
                       fit: BoxFit.cover,
                     ),
                   ),
-                  const CircleAvatar(
-                    radius: 64,
+                  CircleAvatar(
+                    radius: 60.r,
                     backgroundColor: Colors.blue,
                     child: CircleAvatar(
-                      radius: 60,
+                      radius: 56.r,
                       backgroundImage:
-                          AssetImage('assets/images/image_profile.png'),
+                          const AssetImage('assets/images/image_profile.png'),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height / 100),
-            const Text(
+            SizedBox(height: 10.h),
+            Text(
               'Khaled Shbair',
               style: TextStyle(
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w500,
-                fontSize: 24,
+                fontSize: 24.sp,
                 color: Colors.black,
               ),
             ),
-            const Text(
+            Text(
               'Mobile Application Developer - Flutter',
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w300,
-                fontSize: 18,
+                fontSize: 18.sp,
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height / 60),
+            SizedBox(height: 15.h),
             Expanded(
               child: ListView(
                 shrinkWrap: true,
@@ -87,7 +88,7 @@ class BioScreen extends StatelessWidget with Helper {
                     ],
                     icon: FontAwesomeIcons.commentSms,
                     text: 'Sent me sms',
-                    size: 30,
+                    size: 24.h,
                     onTap: () => _myFunctions.sendSMS('0599724037', context),
                   ),
                   MyIcon(
@@ -96,7 +97,7 @@ class BioScreen extends StatelessWidget with Helper {
                       Color(0XFF2AABEE),
                     ],
                     icon: FontAwesomeIcons.telegram,
-                    size: 30,
+                    size: 24.h,
                     text: 'Telegram',
                     onTap: () =>
                         _myFunctions.openTelegramChat('0599724037', context),
@@ -107,7 +108,7 @@ class BioScreen extends StatelessWidget with Helper {
                       Color(0XFF25D366),
                     ],
                     icon: FontAwesomeIcons.whatsapp,
-                    size: 30,
+                    size: 24.h,
                     text: 'WhatsApp',
                     onTap: () => _myFunctions.openWhatsAppChat(
                         '0599724037', 'مرحبا خالد', context),
@@ -119,7 +120,7 @@ class BioScreen extends StatelessWidget with Helper {
                     ],
                     icon: FontAwesomeIcons.facebook,
                     text: 'Facebook',
-                    size: 30,
+                    size: 24.h,
                     onTap: () => _myFunctions.openFacebookProfile(context),
                   ),
                   MyIcon(
@@ -137,7 +138,7 @@ class BioScreen extends StatelessWidget with Helper {
                     ],
                     icon: FontAwesomeIcons.instagram,
                     text: 'Instagram',
-                    size: 30,
+                    size: 24.h,
                     onTap: () => _myFunctions.openInstagramProfile(context),
                   ),
                   MyIcon(
@@ -149,10 +150,10 @@ class BioScreen extends StatelessWidget with Helper {
                     ],
                     leading: CircleAvatar(
                       backgroundColor: Colors.white,
-                      radius: 16,
+                      radius: 14.r,
                       child: SvgPicture.asset(
                         'assets/icons/gmail.svg',
-                        height: 26,
+                        height: 22.h,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -163,13 +164,13 @@ class BioScreen extends StatelessWidget with Helper {
               ),
             ),
             Container(
-              margin: const EdgeInsetsDirectional.only(bottom: 15),
-              child: const Text(
+              margin: EdgeInsetsDirectional.only(bottom: 10.h),
+              child: Text(
                 'Flutter - 2023',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),

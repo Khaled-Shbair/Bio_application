@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyIcon extends StatelessWidget {
   const MyIcon({
@@ -23,14 +24,14 @@ class MyIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsetsDirectional.only(
-        start: 20,
-        end: 20,
-        bottom: 10,
+      margin: EdgeInsetsDirectional.only(
+        start: 20.w,
+        end: 20.w,
+        bottom: 5.h,
       ),
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(13.r),
         gradient: LinearGradient(
           begin: AlignmentDirectional.centerStart,
           end: AlignmentDirectional.centerEnd,
@@ -39,7 +40,7 @@ class MyIcon extends StatelessWidget {
       ),
       child: ListTile(
         onTap: onTap,
-        horizontalTitleGap: 10,
+        horizontalTitleGap: 6.h,
         leading: leading ??
             Icon(
               icon,
@@ -48,8 +49,8 @@ class MyIcon extends StatelessWidget {
             ),
         title: Text(
           text,
-          style: const TextStyle(
-            fontSize: 20,
+          style: TextStyle(
+            fontSize: 18.sp,
             fontFamily: 'Roboto',
             color: Colors.white,
             fontWeight: FontWeight.bold,
