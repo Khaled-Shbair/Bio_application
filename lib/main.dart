@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'screens/launch_screen.dart';
 import 'screens/bio_screen.dart';
 
 void main() {
@@ -11,9 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BioScreen(),
+      initialRoute: '/LaunchScreen',
+      routes: {
+        '/LaunchScreen': (context) => const LaunchScreen(),
+        '/BioScreen': (context) => BioScreen(),
+      },
     );
   }
 }
